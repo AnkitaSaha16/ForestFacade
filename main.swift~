@@ -1,0 +1,67 @@
+//Choose Your Own dventure :D
+
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("Welcome to this weird test of a game, would you like to proceed?")
+
+func startingScenario(){
+    print("Yes, or no?")
+    let answer = readLine()
+    if answer == "yes" {
+        print("You typed yes.")
+    } else {
+        if answer == "no" {
+            print("You typed no.")
+        } else {
+            print("You typed something unexpected.")
+        }
+    }
+}
+
+
+var Story1 = ""
+var Story2 = ""
+var Story3 = ""
+
+
+func test2() {
+    print("This is your first decision, yes or no?")
+    let decision = readLine()
+    if decision == "yes" {
+        Story1 = "A"
+    } else {
+        if decision == "no"  {
+            Story1 = "B"
+        }
+    }
+}
+func test3() {
+    if Story1 == "A" {
+        print("on to decision 3")
+       // Story2()
+    } else {
+        if Story1 == "B" {
+            print("on to 4")
+         //   Story3()
+        }
+    }
+}
+
+
+startingScenario()
+test2()
+test3()
+
+//sleep(1)
+
+
+

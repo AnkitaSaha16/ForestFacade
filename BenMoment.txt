@@ -1,0 +1,29 @@
+var lose = 0
+    var win = 0
+
+for 	_ in 1 ... 1000 {
+    if I  nt.random(in: 1 ... 2) == 1 {
+            print("You Win!")
+	            win += 1
+		        } else{
+			        print("You Lose!")
+				        lose += 1
+					    }
+					    }
+					    print ("You won " + String(win) + " times!")
+					    print("You lost " + String(lose) + " times!")
+					    print("You won \(Double(win) / 10)% of the time!")
+					    print("")
+					    if win < 350 {
+					        print("You are REALLY Unlucky!")
+						} else if win < 500 {
+						    print("You are Unlucky!")
+						    } else if win > 650 {
+						        print("You are REALLY Lucky!")
+							} else if win > 500 {
+							    print("You are Lucky!")
+							    } else {
+							        print("You are Average in every way :/")
+								}
+								
+								       
