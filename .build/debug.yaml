@@ -17,7 +17,7 @@ commands:
     inputs: ["/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule"]
     outputs: ["/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule.o"]
     description: "Wrapping AST for Simple for debugging"
-    args: ["/opt/swift-5.5.3-RELEASE-ubuntu20.04/usr/bin/swiftc","-modulewrap","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule","-o","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+    args: ["/opt/swift-5.6.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-modulewrap","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule","-o","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
 
   "<Simple-debug.exe>":
     tool: phony
@@ -34,13 +34,13 @@ commands:
     inputs: ["/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule.o","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.swift.o"]
     outputs: ["/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple"]
     description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/Simple"
-    args: ["/opt/swift-5.5.3-RELEASE-ubuntu20.04/usr/bin/swiftc","-L","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug","-o","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple","-module-name","Simple","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-L","/opt/swift-5.5.3-RELEASE-ubuntu20.04/usr/lib"]
+    args: ["/opt/swift-5.6.1-RELEASE-ubuntu20.04/usr/bin/swiftc","-L","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug","-o","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple","-module-name","Simple","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-L","/opt/swift-5.6.1-RELEASE-ubuntu20.04/usr/lib"]
 
   "C.Simple-debug.module":
     tool: swift-compiler
     inputs: ["/home/ankita-saha/Experiences/ISP/main.swift"]
     outputs: ["/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.swift.o","/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule"]
-    executable: "/opt/swift-5.5.3-RELEASE-ubuntu20.04/usr/bin/swiftc"
+    executable: "/opt/swift-5.6.1-RELEASE-ubuntu20.04/usr/bin/swiftc"
     module-name: "Simple"
     module-output-path: "/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule"
     import-paths: ["/home/ankita-saha/Experiences/ISP/.build/x86_64-unknown-linux-gnu/debug"]

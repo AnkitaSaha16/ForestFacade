@@ -8,43 +8,15 @@
       "name": "Foundation",
       "printedName": "Foundation",
       "declKind": "Import",
-      "moduleName": "Simple"
-    },
-    {
-      "kind": "Import",
-      "name": "SwiftOnoneSupport",
-      "printedName": "SwiftOnoneSupport",
-      "declKind": "Import",
-      "moduleName": "Simple"
-    },
-    {
-      "kind": "Import",
-      "name": "_Concurrency",
-      "printedName": "_Concurrency",
-      "declKind": "Import",
-      "moduleName": "Simple"
-    },
-    {
-      "kind": "Function",
-      "name": "startingScenario",
-      "printedName": "startingScenario()",
-      "children": [
-        {
-          "kind": "TypeNominal",
-          "name": "Void",
-          "printedName": "()"
-        }
-      ],
-      "declKind": "Func",
-      "usr": "s:6Simple16startingScenarioyyF",
-      "mangledName": "$s6Simple16startingScenarioyyF",
       "moduleName": "Simple",
-      "funcSelfKind": "NonMutating"
+      "declAttributes": [
+        "RawDocComment"
+      ]
     },
     {
       "kind": "Var",
-      "name": "Story1",
-      "printedName": "Story1",
+      "name": "name",
+      "printedName": "name",
       "children": [
         {
           "kind": "TypeNominal",
@@ -54,19 +26,20 @@
         }
       ],
       "declKind": "Var",
-      "usr": "s:6Simple6Story1SSvp",
-      "mangledName": "$s6Simple6Story1SSvp",
+      "usr": "s:6Simple4nameSSvp",
+      "mangledName": "$s6Simple4nameSSvp",
       "moduleName": "Simple",
       "declAttributes": [
         "HasInitialValue",
-        "HasStorage"
+        "HasStorage",
+        "RawDocComment"
       ],
       "hasStorage": true
     },
     {
       "kind": "Function",
-      "name": "test2",
-      "printedName": "test2()",
+      "name": "getNameForImmersiveness",
+      "printedName": "getNameForImmersiveness()",
       "children": [
         {
           "kind": "TypeNominal",
@@ -75,15 +48,15 @@
         }
       ],
       "declKind": "Func",
-      "usr": "s:6Simple5test2yyF",
-      "mangledName": "$s6Simple5test2yyF",
+      "usr": "s:6Simple23getNameForImmersivenessyyF",
+      "mangledName": "$s6Simple23getNameForImmersivenessyyF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
     },
     {
       "kind": "Function",
-      "name": "test3",
-      "printedName": "test3()",
+      "name": "startingScreen",
+      "printedName": "startingScreen()",
       "children": [
         {
           "kind": "TypeNominal",
@@ -92,15 +65,55 @@
         }
       ],
       "declKind": "Func",
-      "usr": "s:6Simple5test3yyF",
-      "mangledName": "$s6Simple5test3yyF",
+      "usr": "s:6Simple14startingScreenyyF",
+      "mangledName": "$s6Simple14startingScreenyyF",
+      "moduleName": "Simple",
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Var",
+      "name": "scene1completion",
+      "printedName": "scene1completion",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple16scene1completionSbvp",
+      "mangledName": "$s6Simple16scene1completionSbvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage",
+        "RawDocComment"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Function",
+      "name": "scene1",
+      "printedName": "scene1()",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Void",
+          "printedName": "()"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:6Simple6scene1yyF",
+      "mangledName": "$s6Simple6scene1yyF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
     },
     {
       "kind": "Function",
-      "name": "Story2",
-      "printedName": "Story2()",
+      "name": "Scene2A",
+      "printedName": "Scene2A()",
       "children": [
         {
           "kind": "TypeNominal",
@@ -109,15 +122,15 @@
         }
       ],
       "declKind": "Func",
-      "usr": "s:6Simple6Story2yyF",
-      "mangledName": "$s6Simple6Story2yyF",
+      "usr": "s:6Simple7Scene2AyyF",
+      "mangledName": "$s6Simple7Scene2AyyF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
     },
     {
       "kind": "Function",
-      "name": "Story3",
-      "printedName": "Story3()",
+      "name": "Scene2B",
+      "printedName": "Scene2B()",
       "children": [
         {
           "kind": "TypeNominal",
@@ -126,8 +139,8 @@
         }
       ],
       "declKind": "Func",
-      "usr": "s:6Simple6Story3yyF",
-      "mangledName": "$s6Simple6Story3yyF",
+      "usr": "s:6Simple7Scene2ByyF",
+      "mangledName": "$s6Simple7Scene2ByyF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
     }

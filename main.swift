@@ -1,11 +1,96 @@
-//Choose Your Own dventure :D
+//Choose Your Own Adventure :D
 import Foundation
 
-func startingScenario(){
+//Forest Facade
+
+
+var name = "" 
+func getNameForImmersiveness() {
     print("\u{001B}[2J")
-    print("Welcome to this weird test of a game, would you like to proceed?")
-    sleep(1)
-    print("Yes, or no?")
+    print("Before proceeding, what is your name, traveler?")
+    if let tempName = readLine() {
+        name = tempName
+    }
+}
+
+func startingScreen() {
+    print("\u{001B}[2J")
+/*
+    print("                                   a")
+    usleep(50000)
+    print("                                  a")
+    usleep(50000)
+    print("                                 a")
+    usleep(50000)
+    print("                                a")
+    usleep(50000)
+    print("                               a")
+    usleep(50000)
+    print("                              a")
+    usleep(50000)
+    print("                             a")
+    usleep(50000)
+    print("                            a")
+    usleep(50000)
+ */
+    print("                            Welcome to Forest Facade!")
+    print("  A game where you must navigate out to the True World and decide your own fate")
+    print("----------------------------------------⌘----------------------------------------")
+    //usleep(1000000) is 1 second
+    //sleep(3)
+    print("\(name), would you like to proceed?")
+    print("(yes) or (no)?")
+    let answer = readLine()
+    if answer == "yes" {
+        scene1()
+    } else {
+        if answer == "no" {
+            scene1()
+            //print("bruh why you playin then")
+        } else {
+            print("\u{001B}[2J")
+            startingScreen()
+        }
+    }
+}
+//print("\(name)")
+var scene1completion = false
+func scene1() {
+    print("\u{001B}[2J")
+    print("You wake up to a bright green covering of leaves, soft rays of sunlight peaking through the ceiling as the day starts.")
+    if scene1completion == false {
+        sleep(2)
+    }
+    print("Getting up from the base of the ever familiar tree trunk, you set your eyes on the scenery in front of you.")
+    if scene1completion == false {
+        sleep(2)
+    }
+    print("Trees surround you as far as the eye can see.")
+    if scene1completion == false {
+        sleep(2)
+    }
+    print("You have come to a fork in the road.")
+    if scene1completion == false {
+        sleep(2)
+    }
+    print("This is your first decision, (left) or (right)?")
+    scene1completion = true
+    let answer = readLine()
+    if answer == "left" {
+        Scene2A()
+    } else {
+        if answer == "right"  {
+            Scene2B()
+        } else {
+            print("\u{001B}[2J")
+            scene1()
+        }
+    }
+}
+
+func Scene2A() {
+    print("\u{001B}[2J")
+    print("well, you went left, now yes or no?")
     let answer = readLine()
     if answer == "yes" {
         print("You typed yes.")
@@ -14,92 +99,44 @@ func startingScenario(){
             print("You typed no.")
         } else {
             print("\u{001B}[2J")
-            startingScenario()
+            Scene2A()
         }
     }
 }
 
-
-var Story1 = ""
-//var Story2 = ""
-//var Story3 = ""
-
-
-func test2() {
+func Scene2B() {
     print("\u{001B}[2J")
-    print("You have come to a fork in the road, and there is a bear on the right, and a snake on the left.")
-    sleep(2)
-    print("This is your first decision, left or right??")
-    let decision = readLine()
-    if decision == "left" {
-        Story1 = "A"
+    print("you went right. Now yes or no?")
+    let answer = readLine()
+    if answer == "yes" {
+        print("You typed yes.")
     } else {
-        if decision == "right"  {
-            Story1 = "B"
+        if answer == "no" {
+            print("You typed no.")
         } else {
             print("\u{001B}[2J")
-            test2()
+            Scene2B()
         }
     }
 }
-func test3() {
+
+getNameForImmersiveness()
+startingScreen()
+//scene1()
+//Scene2A()
+//Scene2B()
+
+// clearing screen  - print("\u{001B}[2J")
+/*
+func decision1() {
     if Story1 == "A" {
-       // print("on to decision 3")
+        // print("on to decision 3")
         Story2()
     } else {
         if Story1 == "B" {
             //print("on to 4")
-           Story3()
-        }
-    }
-}
-
-
-func Story2() {
-    print("well, you went left, now yes or no?")
-    let answer2 = readLine()
-    if answer2 == "yes" {
-        print("You typed yes.")
-    } else {
-        if answer2 == "no" {
-            print("You typed no.")
-        } else {
-            print("\u{001B}[2J")
-            Story2()
-        }
-    }
-}
-
-func Story3() {
-    print("you went right now? now yes or no?")
-    let answer3 = readLine()
-    if answer3 == "yes" {
-        print("You typed yes.")
-    } else {
-        if answer3 == "no" {
-            print("You typed no.")
-        } else {
-            print("\u{001B}[2J")
             Story3()
         }
     }
 }
-
-startingScenario()
-test2()
-test3()
-//Story2()
-//Story3()
-
-
-
-
-
-
-
-
-
-/*
-clearing screen  - print("\u{001B}[2J")
- aj
- */
+*/
