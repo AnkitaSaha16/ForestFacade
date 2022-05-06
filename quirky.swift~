@@ -1,7 +1,0 @@
-import Foundation
-
-
-class quirky: {
-    
-    print("this is a test")
-}
