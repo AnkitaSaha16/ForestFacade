@@ -9,6 +9,8 @@ import Foundation
 var scene1completion = false
 var scene2Acompletion = false
 var scene2Bcompletion = false
+var scene3Acompletion = false
+
 
 var name = "" 
 func getNameForImmersiveness() {
@@ -27,6 +29,7 @@ func startingScreen() {
     print("----------------------------------------⌘----------------------------------------")
     //usleep(1000000) is 1 second
     //sleep(3)
+    print("Instructions! You can type [turnOffPacedStory] to turn off the timers inbetween lines, and you can type [turnOnPacedStory] in order to have artificial pausing in the lines.")
     print("\(name), would you like to proceed?")
     print("[yes] or [no]?")
     let answer = readLine()
@@ -41,19 +44,33 @@ func startingScreen() {
             Scene1()
             //print("bruh why you playin then")
         } else {
-            if answer == "debug" {
+            if answer == "turnOffPacedStory" {
                 scene1completion = true
                 scene2Acompletion = true
                 scene2Bcompletion = true
+                scene3Acompletion = true
+                print("\u{001B}[2J")
+                print("Paced Story Off!")
+                sleep(2)
                 startingScreen()
             } else {
-            print("\u{001B}[2J")
-            startingScreen()
+                if answer == "turnOnPacedStory" {                   
+                    var scene1completion = false
+                    var scene2Acompletion = false
+                    var scene2Bcompletion = false
+                    var scene3Acompletion = false
+                    print("\u{001B}[2J")
+                    print("Paced Story On!")
+                    sleep(2)
+                    startingScreen()
+                } else {
+                    print("\u{001B}[2J")
+                    startingScreen()
+                }
             }
         }
     }
 }
-
 func Scene1() {
     print("\u{001B}[2J")
     print("You wake up to a bright green covering of leaves, soft rays of sunlight peaking through the ceiling as the day starts.")
@@ -117,7 +134,7 @@ func Scene2A() {
     }
     print("It's freezing now.")
     if scene2Acompletion == false {
-        sleep(3) //extra for emphasis lol
+        sleep(4) //extra for emphasis lol
     }
     print("You need a fire.")
     if scene2Acompletion == false {
@@ -172,7 +189,7 @@ func Scene2B() {
     }
     print("You begin to get hungry.")
     if scene2Bcompletion == false {
-        sleep(3) // pause for emphasis
+        sleep(4) // pause for emphasis
     }
     print("There are a few foreign fruits and mushrooms around.")
     if scene2Bcompletion == false {
@@ -204,17 +221,78 @@ func Scene2B() {
         }
     }
 }
-var scene3Acompletion = false
+
 func Scene3A() {
     print("\u{001B}[2J")
-    print("3A")
-    print("You chose to search somewhere else for warmth")
-}
+    print("You chose to search somewhere else for warmth.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("Getting up from the chilly forest floor, you start looking around for sources of heat.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("Your search leads you to a cave.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("The cave seems to be relatively clean and warm.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("You choose to go inside and decide to make a temporary shelter to combat the chilly night.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("Staying at the entrance of the cave won't help you stay warm, so you go farther inside.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("Inside, you find that the cave is bigger than it looked from the outside.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("A large room-like part of the cavern meets you as you venture farther.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("Deciding to stay until it's warm again outside, you start to create your refuge.")
+    if scene3Acompletion == false {
+        sleep(2)
+    }
+    print("Lying down for the night, you wonder how you ended up in this situation.")
+    if scene3Acompletion == false {
+        sleep(4) // extra for emphasis
+    }
+    print("While you are trying to get some sleep, something joins you in the cave.")
+    if scene3Acompletion == false {
+        sleep(4) //extra for emphasis
+    }
+    print("Do you [ignore] it, or do you [get up] from your well-needed slumber and make sure everything is alright?")
 
+    scene3Acompletion = true
+
+    let answer = readLine()
+    if answer == "ignore" {
+        print("4A ignore")
+        //   Scene4A()
+    } else {
+        if answer == "get up" {
+            print("4B get up")
+            //     Scene4B()
+        } else {
+            print("\u{001B}[2J")
+            Scene3A()
+        }
+    }   
+}    
 var scene3Bcompletion = false
 func Scene3B() {
     print("\u{001B}[2J")
-    print("3B")
+    print("You chose to stay at your location and risk the cold.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
 }
 
 var scene3Ccompletion = false
