@@ -476,18 +476,86 @@ func Scene3D() {
 var scene4Acompletion = false
 func Scene4A() {
     print("\u{001B}[2J")
-    print("Scene4A - ignore")
+    print("You chose to ignore the creature.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("If it hasn't already gotten rid of you, it isn't harmless right?")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("You wake up to the cavern, dimly lit.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("You decide to get up and leave the cave, might as well continue trying to find a way out.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("As you try to leave the cave, something grabs you on to your leg.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("YANK!")
+    if scene4Acompletion == false {
+        sleep(4) // exta for emphasis
+    }
+    print("You are dragged back down into the cave, as the light fades away.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    if scene4Acompletion == false {
+        sleep(3) // little extra for emphasis
+    }
+    print("The creature throws you on the floor as the room starts to get hotter.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("A horrible screeching begins to ring through out the cavern.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("There is a large stone next to you.")
+    if scene4Acompletion == false {
+        sleep(2)
+    }
+    print("Do you pick up the rock and [throw] it at the creature, or do you try making a [run] for it?")
+    
+    scene4Acompletion = true
+
+    let answer = readLine()
+    if answer == "throw" {
+        print("scene 5A - throw ")
+    } else {
+        if answer == "run" {
+            print("scene 5B - run")
+        } else {
+            print("\u{001B}[2J")
+            Scene4A()
+        }
+    }
 }
 
 var scene4Bcompletion = false
 func Scene4B() {
     print("\u{001B}[2J")
     print("Scene4B - get up")
+    print("")
 }
 
 getNameForImmersiveness()
 startingScreen()
 
+
+
+
+
+// some notes, and test code!
 
 //scene1()
 //Scene2A()
