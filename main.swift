@@ -1,18 +1,16 @@
 //Choose Your Own Adventure :D
 import Foundation
-
-
-//hey test
 //Forest Facade
 
-//I included a debug mode for going through the story in quick succession.  
 
-
+//The variables below contribute to the sleep timers built into the story. You will be able to turn the timers on and off during the beginning of your story.
 var scene1completion = false
 var scene2Acompletion = false
 var scene2Bcompletion = false
 var scene3Acompletion = false
-
+var scene3Bcompletion = false
+var scene3Ccompletion = false
+var scene3Dcompletion = false
 
 var name = "" 
 func getNameForImmersiveness() {
@@ -25,11 +23,10 @@ func getNameForImmersiveness() {
 }
 
 func startingScreen() {
-    print("\u{001B}[2J")
+    print("\u{001B}[2J") //this statements clears the screen
     print("                            Welcome to Forest Facade!")
     print("  A game where you must navigate out to the True World and decide your own fate")
-    print("----------------------------------------⌘----------------------------------------")
-    //usleep(1000000) is 1 second
+    print("----------------------------------------⌘----------------------------------------")    
     //sleep(3)
     print("Instructions! You can type [turnOffPacedStory] to turn off the timers inbetween lines, and you can type [turnOnPacedStory] in order to have artificial pausing in the lines.")
     print("\(name), would you like to proceed?")
@@ -51,16 +48,22 @@ func startingScreen() {
                 scene2Acompletion = true
                 scene2Bcompletion = true
                 scene3Acompletion = true
+                scene3Bcompletion = true
+                scene3Ccompletion = true
+                scene3Dcompletion = true
                 print("\u{001B}[2J")
                 print("Paced Story Off!")
                 sleep(2)
                 startingScreen()
             } else {
                 if answer == "turnOnPacedStory" {                   
-                    var scene1completion = false
-                    var scene2Acompletion = false
-                    var scene2Bcompletion = false
-                    var scene3Acompletion = false
+                    scene1completion = false
+                    scene2Acompletion = false
+                    scene2Bcompletion = false
+                    scene3Acompletion = false
+                    scene3Bcompletion = false
+                    scene3Ccompletion = false
+                    scene3Dcompletion = false
                     print("\u{001B}[2J")
                     print("Paced Story On!")
                     sleep(2)
@@ -210,7 +213,9 @@ func Scene2B() {
         sleep(2)
     }
     print("Do you try your luck with the bright red [berries], or do you try out the bright yellow [mushrooms]?")
+
     scene2Bcompletion = true
+
     let answer = readLine()
     if answer == "berries" {
         Scene3C()
@@ -276,62 +281,241 @@ func Scene3A() {
 
     let answer = readLine()
     if answer == "ignore" {
-        print("4A ignore")
-        //   Scene4A()
+        Scene4A()
     } else {
         if answer == "get up" {
-            print("4B get up")
-            //     Scene4B()
+            Scene4B()
         } else {
             print("\u{001B}[2J")
             Scene3A()
         }
     }   
 }    
-var scene3Bcompletion = false
+
 func Scene3B() {
     print("\u{001B}[2J")
     print("You chose to stay at your location and risk the cold.")
     if scene3Bcompletion == false {
         sleep(2)
     }
+    print("The temperature continues to drop as night falls.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print("You start questioning if this was the right choice or not, but you shrug it off.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print("Climbing into a nearby tree for the night, you wonder what made you end up here.")
+    if scene3Bcompletion == false {
+        sleep(4)// extra for emphasis
+    }
+    print("Why it was so cold.")
+    if scene3Bcompletion == false {
+        sleep(3) // little extra for emphasis
+    }
+    print("You lean uncomfortably against the flowering branches and try to get some sleep.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print(".      .       .")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print("Morning comes around and you wake up to the aftereffects of last night's rest.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print("You feel extremely sore and your back is aching.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print("While attempting to stretch, you hear an odd noise.")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    print("Do you [stay] in the tree, or do you [climb down] to check out the noise?")
+    if scene3Bcompletion == false {
+        sleep(2)
+    }
+    
+    var scene3Bcompletion = true
+
+    let answer = readLine()
+    if answer == "stay" {
+        print("stay 4C")
+    } else {
+        if answer == "climb down" {
+            print("climb down - 4D")
+        } else {
+            print("\u{001B}[2J")
+            Scene3B()
+        }
+    }
 }
 
-var scene3Ccompletion = false
 func Scene3C() {
     print("\u{001B}[2J")
-    print("3C")
+    print("You chose to try your luck with the bright red berries.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("The bush's branches have thorns jutting out in different directions, so you have to maneuver your hand carefully.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("After a few minutes, you have assembled a large portion of berries.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("The berries taste sweet, with just a hint of a sour taste.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("Energized from eating the delicious fruit, you jump up, ready to find your way out of the seemingly endless forest.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print(".      .       .")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("Continuing on the overgrown path, you arrive at a large field.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("You can see that the field stretches on for a long distance, ending where the trees start again.")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("Flowers ranging from red to blue to orange cover the landscape in front of you. ")
+    if scene3Ccompletion == false {
+        sleep(2)
+    }
+    print("Do you want to [explore] the flower field, or [cross] the flower field and keep trying to find a way out?")
+
+    scene3Ccompletion = true
+
+    let answer = readLine()    
+    if answer == "explore" {
+        print("4E - explore")
+    } else {
+        if answer == "cross" {
+            print("4F cross")
+        } else {
+            print("\u{001B}[2J")
+            Scene3C()
+        }
+    }
 }
 
-var scene3Dcompletion = false
 func Scene3D() {
     print("\u{001B}[2J")
-    print("3D")   
+    print("You decide to try out the bright yellow mushrooms.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("They have a weird taste, fruit-like, but with the texture of meat.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print(".     .     .")
+    if scene3Dcompletion == false {
+        sleep(4) // extra for emphasis
+    }
+    print("You guess you feel fine.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("Nothing weird happened yet so...")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("You take that feeling back, as your head starts to swim.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("Whaaaat waaaas iiin thoooooooose..........")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print(".      .      .")
+    if scene3Dcompletion == false {
+        sleep(4) //extra for emphasis
+    }
+    print("You wake up some time later, the sun's light slowly dimming as the forest gets darker and darker.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("You quickly rise to your feet, realizing that you just wasted so much time.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("You turn to keep going on the path, however you see a mysterious figure in front of you.")
+    if scene3Dcompletion == false {
+        sleep(2)
+    }
+    print("Do you go [towards] the figure, or do you [avoid] it?")
+
+    scene3Dcompletion = true
+    
+    let answer = readLine()    
+    if answer == "towards" {
+        print("scene 4G - towards")
+    } else {
+        if answer == "avoid" {
+            print("scene 4H - avoid")
+        } else {
+            print("\u{001B}[2J")
+            Scene3D()
+        }
+    }
+
 }
+
+var scene4Acompletion = false
+func Scene4A() {
+    print("\u{001B}[2J")
+    print("Scene4A - ignore")
+}
+
+var scene4Bcompletion = false
+func Scene4B() {
+    print("\u{001B}[2J")
+    print("Scene4B - get up")
+}
+
 getNameForImmersiveness()
 startingScreen()
+
 
 //scene1()
 //Scene2A()
 //Scene2B()
 
+//usleep(1000000) is 1 second
 // clearing screen  - print("\u{001B}[2J")
+
 /*
- func decision1() {
- if Story1 == "A" {
- // print("on to decision 3")
- Story2()
- } else {
- if Story1 == "B" {
- //print("on to 4")
- Story3()
- }
- }
- }
- var chooseSkip = readLine()
- if chooseSkip == "skip" {
- var chosenTime = UInt32(0)
- }
+
+func decision1() {
+    if Story1 == "A" {
+        // print("on to decision 1")
+        Story2()
+    } else {
+        if Story1 == "B" {
+            //print("on to 2")
+            Story3()
+        }
+    }
+}
+
+
+
+var chooseSkip = readLine()
+if chooseSkip == "skip" {
+    var chosenTime = UInt32(0)
+}
 
  */
 //print("\(name)")

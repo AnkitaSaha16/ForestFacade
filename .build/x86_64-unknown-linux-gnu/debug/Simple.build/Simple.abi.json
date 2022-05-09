@@ -104,6 +104,72 @@
     },
     {
       "kind": "Var",
+      "name": "scene3Bcompletion",
+      "printedName": "scene3Bcompletion",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple17scene3BcompletionSbvp",
+      "mangledName": "$s6Simple17scene3BcompletionSbvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Var",
+      "name": "scene3Ccompletion",
+      "printedName": "scene3Ccompletion",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple17scene3CcompletionSbvp",
+      "mangledName": "$s6Simple17scene3CcompletionSbvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Var",
+      "name": "scene3Dcompletion",
+      "printedName": "scene3Dcompletion",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple17scene3DcompletionSbvp",
+      "mangledName": "$s6Simple17scene3DcompletionSbvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Var",
       "name": "name",
       "printedName": "name",
       "children": [
@@ -227,28 +293,6 @@
       "funcSelfKind": "NonMutating"
     },
     {
-      "kind": "Var",
-      "name": "scene3Bcompletion",
-      "printedName": "scene3Bcompletion",
-      "children": [
-        {
-          "kind": "TypeNominal",
-          "name": "Bool",
-          "printedName": "Swift.Bool",
-          "usr": "s:Sb"
-        }
-      ],
-      "declKind": "Var",
-      "usr": "s:6Simple17scene3BcompletionSbvp",
-      "mangledName": "$s6Simple17scene3BcompletionSbvp",
-      "moduleName": "Simple",
-      "declAttributes": [
-        "HasInitialValue",
-        "HasStorage"
-      ],
-      "hasStorage": true
-    },
-    {
       "kind": "Function",
       "name": "Scene3B",
       "printedName": "Scene3B()",
@@ -264,28 +308,6 @@
       "mangledName": "$s6Simple7Scene3ByyF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
-    },
-    {
-      "kind": "Var",
-      "name": "scene3Ccompletion",
-      "printedName": "scene3Ccompletion",
-      "children": [
-        {
-          "kind": "TypeNominal",
-          "name": "Bool",
-          "printedName": "Swift.Bool",
-          "usr": "s:Sb"
-        }
-      ],
-      "declKind": "Var",
-      "usr": "s:6Simple17scene3CcompletionSbvp",
-      "mangledName": "$s6Simple17scene3CcompletionSbvp",
-      "moduleName": "Simple",
-      "declAttributes": [
-        "HasInitialValue",
-        "HasStorage"
-      ],
-      "hasStorage": true
     },
     {
       "kind": "Function",
@@ -305,28 +327,6 @@
       "funcSelfKind": "NonMutating"
     },
     {
-      "kind": "Var",
-      "name": "scene3Dcompletion",
-      "printedName": "scene3Dcompletion",
-      "children": [
-        {
-          "kind": "TypeNominal",
-          "name": "Bool",
-          "printedName": "Swift.Bool",
-          "usr": "s:Sb"
-        }
-      ],
-      "declKind": "Var",
-      "usr": "s:6Simple17scene3DcompletionSbvp",
-      "mangledName": "$s6Simple17scene3DcompletionSbvp",
-      "moduleName": "Simple",
-      "declAttributes": [
-        "HasInitialValue",
-        "HasStorage"
-      ],
-      "hasStorage": true
-    },
-    {
       "kind": "Function",
       "name": "Scene3D",
       "printedName": "Scene3D()",
@@ -340,6 +340,84 @@
       "declKind": "Func",
       "usr": "s:6Simple7Scene3DyyF",
       "mangledName": "$s6Simple7Scene3DyyF",
+      "moduleName": "Simple",
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Var",
+      "name": "scene4Acompletion",
+      "printedName": "scene4Acompletion",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple17scene4AcompletionSbvp",
+      "mangledName": "$s6Simple17scene4AcompletionSbvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Function",
+      "name": "Scene4A",
+      "printedName": "Scene4A()",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Void",
+          "printedName": "()"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:6Simple7Scene4AyyF",
+      "mangledName": "$s6Simple7Scene4AyyF",
+      "moduleName": "Simple",
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Var",
+      "name": "scene4Bcompletion",
+      "printedName": "scene4Bcompletion",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        }
+      ],
+      "declKind": "Var",
+      "usr": "s:6Simple17scene4BcompletionSbvp",
+      "mangledName": "$s6Simple17scene4BcompletionSbvp",
+      "moduleName": "Simple",
+      "declAttributes": [
+        "HasInitialValue",
+        "HasStorage"
+      ],
+      "hasStorage": true
+    },
+    {
+      "kind": "Function",
+      "name": "Scene4B",
+      "printedName": "Scene4B()",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Void",
+          "printedName": "()"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:6Simple7Scene4ByyF",
+      "mangledName": "$s6Simple7Scene4ByyF",
       "moduleName": "Simple",
       "funcSelfKind": "NonMutating"
     }
