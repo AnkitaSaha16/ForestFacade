@@ -2,8 +2,8 @@
 import Foundation
 //Forest Facade
 
-
 //The variables below contribute to the sleep timers built into the story. You will be able to turn the timers on and off during the beginning of your story.
+// every variable represents a choosable scenario in the story
 var scene1completion = false
 var scene2Acompletion = false
 var scene2Bcompletion = false
@@ -17,6 +17,22 @@ var scene4Ccompletion = false
 var scene4Dcompletion = false
 var scene4Ecompletion = false
 var scene4Fcompletion = false
+var scene5Acompletion = false
+var scene5Bcompletion = false
+var scene5Ccompletion = false
+var scene5Dcompletion = false
+var scene5Ecompletion = false
+var scene5Fcompletion = false
+var scene5Gcompletion = false
+var scene5Hcompletion = false
+var scene5Icompletion = false
+var scene5Jcompletion = false
+var scene5Kcompletion = false
+var scene5Lcompletion = false
+var scene5Mcompletion = false
+var scene5Ncompletion = false
+var scene5Ocompletion = false
+var scene5Pcompletion = false
 
 var name = "" 
 func getNameForImmersiveness() {
@@ -63,6 +79,24 @@ func startingScreen() {
                 scene4Dcompletion = true
                 scene4Ecompletion = true
                 scene4Fcompletion = true
+                // the 5s scenarios
+                scene5Acompletion = false
+                scene5Bcompletion = false
+                scene5Ccompletion = false
+                scene5Dcompletion = false
+                scene5Ecompletion = false
+                scene5Fcompletion = false
+                scene5Gcompletion = false
+                scene5Hcompletion = false
+                scene5Icompletion = false
+                scene5Jcompletion = false
+                scene5Kcompletion = false
+                scene5Lcompletion = false
+                scene5Mcompletion = false
+                scene5Ncompletion = false
+                scene5Ocompletion = false
+                scene5Pcompletion = false
+                // confirmation to the player to make sure their request went through
                 print("\u{001B}[2J")
                 print("Paced Story Off!")
                 sleep(2)
@@ -82,6 +116,24 @@ func startingScreen() {
                     scene4Dcompletion = false
                     scene4Ecompletion = false
                     scene4Fcompletion = false
+                    // the 5s scenarios
+                    scene5Acompletion = false
+                    scene5Bcompletion = false
+                    scene5Ccompletion = false
+                    scene5Dcompletion = false
+                    scene5Ecompletion = false
+                    scene5Fcompletion = false
+                    scene5Gcompletion = false
+                    scene5Hcompletion = false
+                    scene5Icompletion = false
+                    scene5Jcompletion = false
+                    scene5Kcompletion = false
+                    scene5Lcompletion = false
+                    scene5Mcompletion = false
+                    scene5Ncompletion = false
+                    scene5Ocompletion = false
+                    scene5Pcompletion = false
+                    // confirmation to tell the player that their request went through
                     print("\u{001B}[2J")
                     print("Paced Story On!")
                     sleep(2)
@@ -490,6 +542,46 @@ func Scene3D() {
     }
 
 }
+////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 func Scene4A() {
     print("\u{001B}[2J")
@@ -547,10 +639,10 @@ func Scene4A() {
 
     let answer = readLine()
     if answer == "throw" {
-        print("scene 5A - throw ")
+        Scene5A()
     } else {
         if answer == "run" {
-            print("scene 5B - run")
+            Scene5B()
         } else {
             print("\u{001B}[2J")
             Scene4A()
@@ -618,10 +710,10 @@ func Scene4B() {
 
     let answer = readLine()
     if answer == "touch" {
-        print("scene 5C - touch ")
+        Scene5C()
     } else {
         if answer == "continue" {
-            print("scene 5D - continue")
+            Scene5D()
         } else {
             print("\u{001B}[2J")
             Scene4B()
@@ -658,10 +750,10 @@ func Scene4C() {
     
     let answer = readLine()
     if answer == "towards" {
-        print("scene 5E - towards ")
+        Scene5E()
     } else {
         if answer == "opposite" {
-            print("scene 5F - opposite")
+            Scene5F()
         } else {
             print("\u{001B}[2J")
             Scene4C()
@@ -729,10 +821,10 @@ func Scene4D() {
     
     let answer = readLine()
     if answer == "yelling" {
-        print("scene 5G - yelling ")
+        Scene5G()
     } else {
         if answer == "silent" {
-            print("scene 5H - silent")
+            Scene5H()
         } else {
             print("\u{001B}[2J")
             Scene4D()
@@ -784,10 +876,10 @@ func Scene4E() {
     
     let answer = readLine()
     if answer == "run" {
-        print("scene 5I - run ")
+        Scene5I()
     } else {
         if answer == "still" {
-            print("scene 5J - still ")
+            Scene5J()
         } else {
             print("\u{001B}[2J")
             Scene4E()
@@ -855,10 +947,10 @@ func Scene4F() {
     
     let answer = readLine()
     if answer == "provoke" {
-        print("scene 5K - provoke ")
+        Scene5K()
     } else {
         if answer == "dodge" {
-            print("scene 5L - dodge")
+            Scene5L()
         } else {
             print("\u{001B}[2J")
             Scene4F()
@@ -907,10 +999,10 @@ func Scene4G() {
     
     let answer = readLine()
     if answer == "run" {
-        print("scene 5M - run ")
+        Scene5M()
     } else {
         if answer == "interact" {
-            print("scene 5N - interact")
+            Scene5N()
         } else {
             print("\u{001B}[2J")
             Scene4G()
@@ -935,18 +1027,30 @@ func Scene4H() {
     }
     print("Or so you thought.")
     if scene4Hcompletion == false {
-        sleep(2)
+        sleep(4) // extra for emphasis
     }
     print("Your steps have somehow brought you straight to the creature.")
-
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("You start running as the creature locks its head on your movement.")
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("You see a nearby dense grove that you could run into and try to hide.")
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("Do you take your chances and [hide], or do you [keep running]?")
+    
     scene4Hcompletion = true
     
     let answer = readLine()
-    if answer == "yes" {
-        print("scene 5O -  ")
+    if answer == "hide" {
+        Scene5O()
     } else {
-        if answer == "no" {
-            print("scene 5P -")
+        if answer == "keep running" {
+            Scene5P()
         } else {
             print("\u{001B}[2J")
             Scene4H()
@@ -954,8 +1058,484 @@ func Scene4H() {
     }   
 }
 
+ /////
+
+
+
+
+
+
+
+//the 5s
+func Scene5A() {
+    print("\u{001B}[2J")
+    if scene5Acompletion == false {
+        sleep(2)
+    }
+
+    
+    print("Ending _ of 16.")
+    if scene5Acompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Acompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5A()
+        }
+    }   
+}
+
+func Scene5B() {
+    print("\u{001B}[2J")
+    if scene5Bcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Bcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Bcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5B()
+        }
+    }   
+}
+
+func Scene5C() {
+    print("\u{001B}[2J")
+    if scene5Ccompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Ccompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Ccompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5C()
+        }
+    }   
+}
+
+func Scene5D() {
+    print("\u{001B}[2J")
+    if scene5Dcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Dcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Dcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5D()
+        }
+    }   
+}
+
+func Scene5E() {
+    print("\u{001B}[2J")
+    if scene5Ecompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Ecompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Ecompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5E()
+        }
+    }   
+}
+
+func Scene5F() {
+    print("\u{001B}[2J")
+    if scene5Fcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Fcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Fcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5F()
+        }
+    }   
+}
+
+func Scene5G() {
+    print("\u{001B}[2J")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Gcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5G()
+        }
+    }   
+}
+
+func Scene5H() {
+    print("\u{001B}[2J")
+    if scene5Hcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Hcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Hcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5H()
+        }
+    }   
+}
+
+func Scene5I() {
+    print("\u{001B}[2J")
+    if scene5Icompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Icompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Icompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5I()
+        }
+    }   
+}
+
+func Scene5J() {
+    print("\u{001B}[2J")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Jcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5J()
+        }
+    }   
+}
+
+func Scene5K() {
+    print("\u{001B}[2J")
+    if scene5Kcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Kcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Kcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5K()
+        }
+    }   
+}
+
+func Scene5L() {
+    print("\u{001B}[2J")
+    if scene5Lcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Lcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Lcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5L()
+        }
+    }   
+}
+
+func Scene5M() {
+    print("\u{001B}[2J")
+    if scene5Mcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Mcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Mcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5M()
+        }
+    }   
+}
+
+func Scene5N() {
+    print("\u{001B}[2J")
+    if scene5Ncompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Ncompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Ncompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5N()
+        }
+    }   
+}
+
+func Scene5O() {
+    print("\u{001B}[2J")
+    if scene5Ocompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Ocompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Ocompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5O()
+        }
+    }   
+}
+
+func Scene5P() {
+    print("\u{001B}[2J")
+    if scene5Pcompletion == false {
+        sleep(2)
+    }
+
+    print("Ending _ of 16.")
+    if scene5Pcompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
+    scene5Pcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        startingScreen()
+    } else {
+        if answer == "no" {
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
+        } else {
+            print("\u{001B}[2J")
+            Scene5P()
+        }
+    }   
+}
+
 getNameForImmersiveness()
 startingScreen()
+
+
 /*
 var scenecompletion = false
 func Scene() {
@@ -964,14 +1544,22 @@ func Scene() {
         sleep(2)
     }
 
+    print("Ending _ of 16.")
+    if scenecompletion == false {
+        sleep(2)
+    }
+    print("Would you like to play again?")
+    print("[yes] or [no]?")
+
     scenecompletion = true
     
     let answer = readLine()
     if answer == "yes" {
-        print("scene 5 -  ")
+        startingScreen()
     } else {
         if answer == "no" {
-            print("scene 5 -")
+            print("\u{001B}[2J")
+            print("Thank you so much for playing!")
         } else {
             print("\u{001B}[2J")
             Scene()
