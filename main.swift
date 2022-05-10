@@ -17,6 +17,7 @@ var scene4Ccompletion = false
 var scene4Dcompletion = false
 var scene4Ecompletion = false
 var scene4Fcompletion = false
+// 5s scenarios
 var scene5Acompletion = false
 var scene5Bcompletion = false
 var scene5Ccompletion = false
@@ -49,7 +50,6 @@ func startingScreen() {
     print("                            Welcome to Forest Facade!")
     print("  A game where you must navigate out to the True World and decide your own fate")
     print("----------------------------------------⌘----------------------------------------")    
-    //sleep(3)
     print("Instructions! You can type [turnOffPacedStory] to turn off the timers inbetween lines, and you can type [turnOnPacedStory] in order to have artificial pausing in the lines.")
     print("\(name), would you like to proceed?")
     print("[yes] or [no]?")
@@ -540,48 +540,7 @@ func Scene3D() {
             Scene3D()
         }
     }
-
 }
-////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 func Scene4A() {
     print("\u{001B}[2J")
@@ -1058,23 +1017,24 @@ func Scene4H() {
     }   
 }
 
- /////
-
-
-
-
-
-
-
-//the 5s
 func Scene5A() {
     print("\u{001B}[2J")
+    print("You chose to pick up the rock and throw it at the creature.")
     if scene5Acompletion == false {
         sleep(2)
     }
-
-    
-    print("Ending _ of 16.")
+    print("Smashing the rock against its skull made the thing screech a blood-curdling sound.")
+    if scene5Acompletion == false {
+        sleep(2)
+    }
+    print("The creature opened its jaw and captured your head.")
+    if scene5Acompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("You died a swift death. Game Over.")
+    print("Ending 1 of 16.")
+    print(".    .    .")
     if scene5Acompletion == false {
         sleep(2)
     }
@@ -1099,14 +1059,19 @@ func Scene5A() {
 
 func Scene5B() {
     print("\u{001B}[2J")
+    print("You tried making a run for it.")
+    if scene5Bcompletion == false {
+        sleep(2)
+    }
+    print("Before you could gain any sort of distance from the creature, it grabbed you and murdered you.")
+    print(".    .    .")
+    print("Your death was swift. Game Over.")
+    print("Ending 2 of 16.")
+    print(".    .    .")
     if scene5Bcompletion == false {
         sleep(2)
     }
 
-    print("Ending _ of 16.")
-    if scene5Bcompletion == false {
-        sleep(2)
-    }
     print("Would you like to play again?")
     print("[yes] or [no]?")
 
@@ -1128,11 +1093,27 @@ func Scene5B() {
 
 func Scene5C() {
     print("\u{001B}[2J")
+    print("You chose to touch the flower.")
+    print("The flower was slightly difficult to get to, however you make your way to it, standing in knee-deep water.")
     if scene5Ccompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("You reach out and touch the delicate thing.")
+    if scene5Ccompletion == false {
+        sleep(2)
+    }
+    print("And drop.")
+    if scene5Ccompletion == false {
+        sleep(4) // extra for emphasis
+    }
+    print("Asleep forever more, next to the flower which will accompany you in your dreams.")
+    if scene5Ccompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("You fell asleep permanently. Game Over.")
+    print("Ending 3 of 16.")
+    print(".    .    .")
     if scene5Ccompletion == false {
         sleep(2)
     }
@@ -1157,11 +1138,26 @@ func Scene5C() {
 
 func Scene5D() {
     print("\u{001B}[2J")
+    print("You chose to continue down the path.")
     if scene5Dcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("You start to get tired from walking")
+    if scene5Dcompletion == false {
+        sleep(2)
+    }
+    print("Finding a large rock to sit down and catch your breath, you are suddenly met face to face with the creature.")
+    if scene5Dcompletion == false {
+        sleep(2)
+    }
+    print("Before you could react, the creature swiftly chomps down on your head.")
+    if scene5Dcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Your death was painless. Game Over.")
+    print("Ending 4 of 16.")
+    print(".    .    .")    
     if scene5Dcompletion == false {
         sleep(2)
     }
@@ -1186,11 +1182,26 @@ func Scene5D() {
 
 func Scene5E() {
     print("\u{001B}[2J")
+    print("You chose to go towards the direction of the creature.")
     if scene5Ecompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("It won't circle back around right?")
+    if scene5Ecompletion == false {
+        sleep(2)
+    }
+    print("That answer was severely crushed as you came face to face with the creature.")
+    if scene5Ecompletion == false {
+        sleep(2)
+    }
+    print("It grabs you by the neck and throws you against a nearby tree, breaking your neck.")
+    if scene5Ecompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death came swiftly. Game Over.")
+    print("Ending 5 of 16.")
+    print(".    .    .")
     if scene5Ecompletion == false {
         sleep(2)
     }
@@ -1215,11 +1226,26 @@ func Scene5E() {
 
 func Scene5F() {
     print("\u{001B}[2J")
+    print("You go in the opposite direction of the creature.")
     if scene5Fcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("Nearly keeping a running pace now, you desperately try to avoid the creature.")
+    if scene5Fcompletion == false {
+        sleep(2)
+    }
+    print("However, as you make a turn that should have led you away from the thing, you come face to face with it.")
+    if scene5Fcompletion == false {
+        sleep(2)
+    }
+    print("The creature promptly grabs you and throws you into a spiky branch.")
+    if scene5Fcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was prompt. Game Over.")
+    print("Ending 6 of 16.")
+    print(".    .    .")
     if scene5Fcompletion == false {
         sleep(2)
     }
@@ -1244,11 +1270,34 @@ func Scene5F() {
 
 func Scene5G() {
     print("\u{001B}[2J")
+    print("You try yelling at the creature and intimidating it.")
     if scene5Gcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("The creature starts freaking out, putting its paws near where its ears should be.")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print("You continue making loud noises.")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print("Finally, the creature gets its paw off of you and you can breathe properly again.")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print("Now what?")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print("You suppose you'll find a way out of this place...")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Is it really Game Over? There's still so much to explore.")
+    print("Ending 7 of 16.")
+    print(".    .    .")
     if scene5Gcompletion == false {
         sleep(2)
     }
@@ -1273,11 +1322,18 @@ func Scene5G() {
 
 func Scene5H() {
     print("\u{001B}[2J")
+    print("You decide to stay silent.")
     if scene5Hcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("The creature opens its jaw, suddenly, all you see is black.")
+    if scene5Gcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was granted quickly. Game Over.")
+    print("Ending 8 of 16.")
+    print(".    .    .")
     if scene5Hcompletion == false {
         sleep(2)
     }
@@ -1302,11 +1358,22 @@ func Scene5H() {
 
 func Scene5I() {
     print("\u{001B}[2J")
+    print("You chose to make a run for it.")
     if scene5Icompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("Before you could make any step, the beast catches up to you.")
+    if scene5Icompletion == false {
+        sleep(2)
+    }
+    print("With one swift motion, your head is gone.")
+    if scene5Icompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was immediate. Game Over.")
+    print("Ending 9 of 16.")
+    print(".    .    .")
     if scene5Icompletion == false {
         sleep(2)
     }
@@ -1331,11 +1398,22 @@ func Scene5I() {
 
 func Scene5J() {
     print("\u{001B}[2J")
+    print("You chose to stay still, as the creature came closer and closer to you.")
     if scene5Jcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("The creature inched closer and closer until its jaw was open, hanging over you.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("In one quick motion, your head wasn't attached anymore.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was rapid. Game Over.")
+    print("Ending 10 of 16.")
+    print(".    .    .")
     if scene5Jcompletion == false {
         sleep(2)
     }
@@ -1360,11 +1438,42 @@ func Scene5J() {
 
 func Scene5K() {
     print("\u{001B}[2J")
+    print("You provoke the creature.")
     if scene5Kcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("You slap the front of its head and duck out of the way.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("Sure enough, the creature tried to headbutt you and broke the wall behind.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("However, the creature keeps going.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("Before you could blink, it throws itself off the edge of the cliff your eyes had been opened up to.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("It's gone..?")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("You go to the edge of the cliff, finally out of the forest.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print("A large ocean greets you with warm sunlight and inviting waters.")
+    if scene5Jcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Can you really call this an ending? I say that it's more of a beginning.")
+    print("Ending 11 of 16.")
+    print(".    .    .")
     if scene5Kcompletion == false {
         sleep(2)
     }
@@ -1389,11 +1498,22 @@ func Scene5K() {
 
 func Scene5L() {
     print("\u{001B}[2J")
+    print("You decide to dodge the creature and run.")
     if scene5Lcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("You overestimate your speed greatly, as the creature swiftly catches up with you.")
+    if scene5Lcompletion == false {
+        sleep(2)
+    }
+    print("The creature grabs onto you and throws you against the ancient wall.")
+    if scene5Lcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was brisk. Game Over.")
+    print("Ending 12 of 16.")
+    print(".    .    .")
     if scene5Lcompletion == false {
         sleep(2)
     }
@@ -1418,11 +1538,22 @@ func Scene5L() {
 
 func Scene5M() {
     print("\u{001B}[2J")
+    print("You decide to run.")
     if scene5Mcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("As you run, the creature catches up with you in a heartbeat.")
+    if scene5Mcompletion == false {
+        sleep(2)
+    }
+    print("It grabs you and throws you to the ground.")
+    if scene5Mcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was numb. Game Over.")
+    print("Ending 13 of 16.")
+    print(".    .    .")
     if scene5Mcompletion == false {
         sleep(2)
     }
@@ -1447,11 +1578,22 @@ func Scene5M() {
 
 func Scene5N() {
     print("\u{001B}[2J")
+    print("You decide to interact with the creature.")
     if scene5Ncompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("You put your hand up to its face and are met with a loud screech.")
+    if scene5Ncompletion == false {
+        sleep(2)
+    }
+    print("The creature swiftly chomps down on your arm, and then your head.")
+    if scene5Ncompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was a blessing. Game Over.")
+    print("Ending 14 of 16.")
+    print(".    .    .")
     if scene5Ncompletion == false {
         sleep(2)
     }
@@ -1476,11 +1618,22 @@ func Scene5N() {
 
 func Scene5O() {
     print("\u{001B}[2J")
+    print("You chose to try to hide.")
     if scene5Ocompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("You jump into the grove of plants, as you try to calm your breathing down.")
+    if scene5Ocompletion == false {
+        sleep(2)
+    }
+    print("Suddenly, the creature appears above you, and promptly chomps down on your head.")
+    if scene5Ocompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was merciful. Game Over.")
+    print("Ending 15 of 16.")
+    print(".    .    .")
     if scene5Ocompletion == false {
         sleep(2)
     }
@@ -1505,11 +1658,18 @@ func Scene5O() {
 
 func Scene5P() {
     print("\u{001B}[2J")
+    print("You chose to keep running.")
     if scene5Pcompletion == false {
         sleep(2)
     }
-
-    print("Ending _ of 16.")
+    print("However, you can't run forever. The creature catches up with you and promptly chomps down on your head.")
+    if scene5Pcompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    print("Death was lenient. Game Over.")
+    print("Ending 16 of 16.")
+    print(".    .    .")
     if scene5Pcompletion == false {
         sleep(2)
     }
@@ -1532,8 +1692,10 @@ func Scene5P() {
     }   
 }
 
+// finally, the call to these functions start the whole game!
 getNameForImmersiveness()
 startingScreen()
+
 
 
 /*
