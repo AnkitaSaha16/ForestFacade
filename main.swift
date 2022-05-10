@@ -1,7 +1,7 @@
 //Choose Your Own Adventure :D
 import Foundation
 //Forest Facade
-
+// Written by Ankita Saha in 10th grade, CS - 1
 //The variables below contribute to the sleep timers built into the story. You will be able to turn the timers on and off during the beginning of your story.
 // every variable represents a choosable scenario in the story
 var scene1completion = false
@@ -17,6 +17,8 @@ var scene4Ccompletion = false
 var scene4Dcompletion = false
 var scene4Ecompletion = false
 var scene4Fcompletion = false
+var scene4Gcompletion = false
+var scene4Hcompletion = false
 // 5s scenarios
 var scene5Acompletion = false
 var scene5Bcompletion = false
@@ -113,6 +115,8 @@ func Option() {
         scene4Dcompletion = true
         scene4Ecompletion = true
         scene4Fcompletion = true
+        scene4Gcompletion = true
+        scene4Hcompletion = true
         // the 5s scenarios
         scene5Acompletion = true
         scene5Bcompletion = true
@@ -151,6 +155,8 @@ func Option() {
             scene4Dcompletion = false
             scene4Ecompletion = false
             scene4Fcompletion = false
+            scene4Gcompletion = false
+            scene4Hcompletion = false
             // the 5s scenarios
             scene5Acompletion = false
             scene5Bcompletion = false
@@ -955,7 +961,6 @@ func Scene4F() {
     }   
 }
 
-var scene4Gcompletion = false
 func Scene4G() {
     print("\u{001B}[2J")
     print("You chose to go towards the figure.")
@@ -1007,7 +1012,6 @@ func Scene4G() {
     }   
 }
 
-var scene4Hcompletion = false
 func Scene4H() {
     print("\u{001B}[2J")
     print("You chose to avoid the figure.")
@@ -1180,7 +1184,7 @@ func Scene5D() {
     if scene5Dcompletion == false {
         sleep(2)
     }
-    print("You start to get tired from walking")
+    print("You start to get tired from walking.")
     if scene5Dcompletion == false {
         sleep(2)
     }
