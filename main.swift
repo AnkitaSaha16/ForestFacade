@@ -11,7 +11,8 @@ var scene3Acompletion = false
 var scene3Bcompletion = false
 var scene3Ccompletion = false
 var scene3Dcompletion = false
-
+var scene4Acompletion = false
+var scene4Bcompletion = false
 var name = "" 
 func getNameForImmersiveness() {
     print("\u{001B}[2J")
@@ -51,6 +52,8 @@ func startingScreen() {
                 scene3Bcompletion = true
                 scene3Ccompletion = true
                 scene3Dcompletion = true
+                scene4Acompletion = true
+                scene4Bcompletion = true
                 print("\u{001B}[2J")
                 print("Paced Story Off!")
                 sleep(2)
@@ -64,6 +67,8 @@ func startingScreen() {
                     scene3Bcompletion = false
                     scene3Ccompletion = false
                     scene3Dcompletion = false
+                    scene4Acompletion = false
+                    scene4Bcompletion = false
                     print("\u{001B}[2J")
                     print("Paced Story On!")
                     sleep(2)
@@ -473,7 +478,6 @@ func Scene3D() {
 
 }
 
-var scene4Acompletion = false
 func Scene4A() {
     print("\u{001B}[2J")
     print("You chose to ignore the creature.")
@@ -541,13 +545,109 @@ func Scene4A() {
     }
 }
 
-var scene4Bcompletion = false
 func Scene4B() {
     print("\u{001B}[2J")
-    print("Scene4B - get up")
-    print("")
+    print("You chose to get up and confront the creature.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("You come face to face with a tall... thing.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("The creature slowly starts backing away when it realizes that you've gotten up.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("Is it scared of you?")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("You flail your arms about and yell, trying to ward off the creature.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("The creature turns tail and runs as you rejoice in victory.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("You're safe!")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("However, you are still in the cave.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("You go outside of the cave, your surroundings still dark.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("You choose to search elsewhere, since you can't sleep anymore, after that encounter.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("Walking out of the cave, you find a river with a waterfall upstream.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("The moonlight bounces off the water and illuminates your surroundings.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("A single flower stands in the middle of the shallow pool.")
+    if scene4Bcompletion == false {
+        sleep(2)
+    }
+    print("Do you want to [touch] the flower, or do you want to [continue] down the path?")
+        
+    scene4Bcompletion = true
+
+    let answer = readLine()
+    if answer == "touch" {
+        print("scene 5C - touch ")
+    } else {
+        if answer == "continue" {
+            print("scene 5D - continue")
+        } else {
+            print("\u{001B}[2J")
+            Scene4B()
+        }
+    }
 }
 
+var scene4Ccompletion = false
+func Scene4C() {
+    print("\u{001B}[2J")
+    print("You chose to stay in the tree.")
+    if scene4Ccompletion == false {
+        sleep(2)
+    }
+    print("You stay quiet as a creature comes into view, clearly searching for something.")
+    if scene4Ccompletion == false {
+        sleep(2)
+    }
+    print("Its snout seems to scan the ground as it walks.")
+    if scene4Ccompletion == false {
+        sleep(2)
+    }
+    print("")
+    
+    scene4Ccompletion = true
+    
+    let answer = readLine()
+    if answer == "touch" {
+        print("scene 5E - touch ")
+    } else {
+        if answer == "continue" {
+            print("scene 5F - continue")
+        } else {
+            print("\u{001B}[2J")
+            Scene4C()
+        }
+    }
+    
+}
 getNameForImmersiveness()
 startingScreen()
 
