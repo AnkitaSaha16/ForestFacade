@@ -50,7 +50,9 @@ func startingScreen() {
     print("                            Welcome to Forest Facade!")
     print("  A game where you must navigate out to the True World and decide your own fate")
     print("----------------------------------------⌘----------------------------------------")    
-    print("Instructions! You can type [turnOffPacedStory] to turn off the timers inbetween lines, and you can type [turnOnPacedStory] in order to have artificial pausing in the lines.")
+    print("Type [Instructions] to get a basic layout of the controls for the game!")
+    print("Type [Options] to navigate to specific settings for the game!")
+    print("")
     print("\(name), would you like to proceed?")
     print("[yes] or [no]?")
     let answer = readLine()
@@ -63,81 +65,12 @@ func startingScreen() {
             print("( ͠° ͟ʖ ͡°)")
             sleep(2)
             Scene1()
-            //print("bruh why you playin then")
         } else {
-            if answer == "turnOffPacedStory" {
-                scene1completion = true
-                scene2Acompletion = true
-                scene2Bcompletion = true
-                scene3Acompletion = true
-                scene3Bcompletion = true
-                scene3Ccompletion = true
-                scene3Dcompletion = true
-                scene4Acompletion = true
-                scene4Bcompletion = true
-                scene4Ccompletion = true
-                scene4Dcompletion = true
-                scene4Ecompletion = true
-                scene4Fcompletion = true
-                // the 5s scenarios
-                scene5Acompletion = false
-                scene5Bcompletion = false
-                scene5Ccompletion = false
-                scene5Dcompletion = false
-                scene5Ecompletion = false
-                scene5Fcompletion = false
-                scene5Gcompletion = false
-                scene5Hcompletion = false
-                scene5Icompletion = false
-                scene5Jcompletion = false
-                scene5Kcompletion = false
-                scene5Lcompletion = false
-                scene5Mcompletion = false
-                scene5Ncompletion = false
-                scene5Ocompletion = false
-                scene5Pcompletion = false
-                // confirmation to the player to make sure their request went through
-                print("\u{001B}[2J")
-                print("Paced Story Off!")
-                sleep(2)
-                startingScreen()
+            if answer == "Instructions" {
+                Instructions()
             } else {
-                if answer == "turnOnPacedStory" {                   
-                    scene1completion = false
-                    scene2Acompletion = false
-                    scene2Bcompletion = false
-                    scene3Acompletion = false
-                    scene3Bcompletion = false
-                    scene3Ccompletion = false
-                    scene3Dcompletion = false
-                    scene4Acompletion = false
-                    scene4Bcompletion = false
-                    scene4Ccompletion = false
-                    scene4Dcompletion = false
-                    scene4Ecompletion = false
-                    scene4Fcompletion = false
-                    // the 5s scenarios
-                    scene5Acompletion = false
-                    scene5Bcompletion = false
-                    scene5Ccompletion = false
-                    scene5Dcompletion = false
-                    scene5Ecompletion = false
-                    scene5Fcompletion = false
-                    scene5Gcompletion = false
-                    scene5Hcompletion = false
-                    scene5Icompletion = false
-                    scene5Jcompletion = false
-                    scene5Kcompletion = false
-                    scene5Lcompletion = false
-                    scene5Mcompletion = false
-                    scene5Ncompletion = false
-                    scene5Ocompletion = false
-                    scene5Pcompletion = false
-                    // confirmation to tell the player that their request went through
-                    print("\u{001B}[2J")
-                    print("Paced Story On!")
-                    sleep(2)
-                    startingScreen()
+                if answer == "Options" {                   
+                    Option()
                 } else {
                     print("\u{001B}[2J")
                     startingScreen()
@@ -146,6 +79,111 @@ func startingScreen() {
         }
     }
 }
+
+func Instructions() {
+    print("\u{001B}[2J")
+    print("In order to navigate the game, you will type whatever appears in square brackets!")
+    print("Type [back] to go back!")
+    let answer = readLine()
+    if answer == "back" {
+        startingScreen()
+    } else {
+        print("\u{001B}[2J")
+        Instructions()
+    }
+}
+func Option() {
+    print("\u{001B}[2J")
+    print("This game has built-in timers for pacing in between story lines!")
+    print("You can type [turnOffPacedStory] to turn off the timers inbetween lines, and you can type [turnOnPacedStory] in order to have artificial pausing in the lines.")    
+    print("By default, PacedStory is on!")
+    print("Type [back] to go back!")
+    let answer = readLine()
+    if answer == "turnOffPacedStory" {
+        scene1completion = true
+        scene2Acompletion = true
+        scene2Bcompletion = true
+        scene3Acompletion = true
+        scene3Bcompletion = true
+        scene3Ccompletion = true
+        scene3Dcompletion = true
+        scene4Acompletion = true
+        scene4Bcompletion = true
+        scene4Ccompletion = true
+        scene4Dcompletion = true
+        scene4Ecompletion = true
+        scene4Fcompletion = true
+        // the 5s scenarios
+        scene5Acompletion = true
+        scene5Bcompletion = true
+        scene5Ccompletion = true
+        scene5Dcompletion = true
+        scene5Ecompletion = true
+        scene5Fcompletion = true
+        scene5Gcompletion = true
+        scene5Hcompletion = true
+        scene5Icompletion = true
+        scene5Jcompletion = true
+        scene5Kcompletion = true
+        scene5Lcompletion = true
+        scene5Mcompletion = true
+        scene5Ncompletion = true
+        scene5Ocompletion = true
+        scene5Pcompletion = true
+        // confirmation to the player to make sure their request went through
+        print("\u{001B}[2J")
+        print("Paced Story Off!")
+        sleep(2)
+        print("\u{001B}[2J")
+        Option()
+    } else {
+        if answer == "turnOnPacedStory" {
+            scene1completion = false
+            scene2Acompletion = false
+            scene2Bcompletion = false
+            scene3Acompletion = false
+            scene3Bcompletion = false
+            scene3Ccompletion = false
+            scene3Dcompletion = false
+            scene4Acompletion = false
+            scene4Bcompletion = false
+            scene4Ccompletion = false
+            scene4Dcompletion = false
+            scene4Ecompletion = false
+            scene4Fcompletion = false
+            // the 5s scenarios
+            scene5Acompletion = false
+            scene5Bcompletion = false
+            scene5Ccompletion = false
+            scene5Dcompletion = false
+            scene5Ecompletion = false
+            scene5Fcompletion = false
+            scene5Gcompletion = false
+            scene5Hcompletion = false
+            scene5Icompletion = false
+            scene5Jcompletion = false
+            scene5Kcompletion = false
+            scene5Lcompletion = false
+            scene5Mcompletion = false
+            scene5Ncompletion = false
+            scene5Ocompletion = false
+            scene5Pcompletion = false
+            // confirmation to tell the player that their request went through
+            print("\u{001B}[2J")
+            print("Paced Story On!")
+            sleep(2)
+            Option()
+        } else {
+            if answer == "back" {
+                startingScreen()
+            } else {
+                print("\u{001B}[2J")
+                startingScreen()
+            }
+        }
+    }
+}
+
 func Scene1() {
     print("\u{001B}[2J")
     print("You wake up to a bright green covering of leaves, soft rays of sunlight peaking through the ceiling as the day starts.")
