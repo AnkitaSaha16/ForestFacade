@@ -13,6 +13,11 @@ var scene3Ccompletion = false
 var scene3Dcompletion = false
 var scene4Acompletion = false
 var scene4Bcompletion = false
+var scene4Ccompletion = false
+var scene4Dcompletion = false
+var scene4Ecompletion = false
+var scene4Fcompletion = false
+
 var name = "" 
 func getNameForImmersiveness() {
     print("\u{001B}[2J")
@@ -54,6 +59,10 @@ func startingScreen() {
                 scene3Dcompletion = true
                 scene4Acompletion = true
                 scene4Bcompletion = true
+                scene4Ccompletion = true
+                scene4Dcompletion = true
+                scene4Ecompletion = true
+                scene4Fcompletion = true
                 print("\u{001B}[2J")
                 print("Paced Story Off!")
                 sleep(2)
@@ -69,6 +78,10 @@ func startingScreen() {
                     scene3Dcompletion = false
                     scene4Acompletion = false
                     scene4Bcompletion = false
+                    scene4Ccompletion = false
+                    scene4Dcompletion = false
+                    scene4Ecompletion = false
+                    scene4Fcompletion = false
                     print("\u{001B}[2J")
                     print("Paced Story On!")
                     sleep(2)
@@ -344,14 +357,14 @@ func Scene3B() {
         sleep(2)
     }
     
-    var scene3Bcompletion = true
+    scene3Bcompletion = true
 
     let answer = readLine()
     if answer == "stay" {
-        print("stay 4C")
+        Scene4C()
     } else {
         if answer == "climb down" {
-            print("climb down - 4D")
+            Scene4D()
         } else {
             print("\u{001B}[2J")
             Scene3B()
@@ -403,10 +416,10 @@ func Scene3C() {
 
     let answer = readLine()    
     if answer == "explore" {
-        print("4E - explore")
+        Scene4E()
     } else {
         if answer == "cross" {
-            print("4F cross")
+            Scene4F()
         } else {
             print("\u{001B}[2J")
             Scene3C()
@@ -466,10 +479,10 @@ func Scene3D() {
     
     let answer = readLine()    
     if answer == "towards" {
-        print("scene 4G - towards")
+        Scene4G()
     } else {
         if answer == "avoid" {
-            print("scene 4H - avoid")
+            Scene4H()
         } else {
             print("\u{001B}[2J")
             Scene3D()
@@ -616,7 +629,7 @@ func Scene4B() {
     }
 }
 
-var scene4Ccompletion = false
+
 func Scene4C() {
     print("\u{001B}[2J")
     print("You chose to stay in the tree.")
@@ -631,29 +644,341 @@ func Scene4C() {
     if scene4Ccompletion == false {
         sleep(2)
     }
-    print("")
-    
+    print("Fear courses through your veins, as the creature makes its way out of your sight.")
+    if scene4Ccompletion == false {
+        sleep(2)
+    }
+    print("Once the creature has been gone for sometime, you get out of the tree.")
+    if scene4Ccompletion == false {
+        sleep(2)
+    }
+    print("Do you go [towards] the direction that the creature went, or do you go in the [opposite] direction, hoping to find a way out?")
+
     scene4Ccompletion = true
     
     let answer = readLine()
-    if answer == "touch" {
-        print("scene 5E - touch ")
+    if answer == "towards" {
+        print("scene 5E - towards ")
     } else {
-        if answer == "continue" {
-            print("scene 5F - continue")
+        if answer == "opposite" {
+            print("scene 5F - opposite")
         } else {
             print("\u{001B}[2J")
             Scene4C()
         }
-    }
-    
+    }   
 }
+
+func Scene4D() {
+    print("\u{001B}[2J")
+    print("You chose to climb down to check out the noise.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("As you reach the ground, you realize that this was probably a mistake.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("\"\(name).\"")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("The creature knew your name.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You look around for the source of sound, your name still reverberating in your ears.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("The creature lunges at you from behind and you fall to the ground.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You are being crushed by it.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You attempt to release yourself from its grip, however you are not strong enough.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You don't know what to do.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You suddenly have an idea.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You could try screaming and making a lot of sound?")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("You read somewhere that it worked against various wildlife.")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("However, if it doesn't like the fact that you're making so much noise...")
+    if scene4Dcompletion == false {
+        sleep(2)
+    }
+    print("Do you try [yelling] at it and intimidating it, or do you stay [silent] and see what the creature does?")
+    
+    scene4Dcompletion = true
+    
+    let answer = readLine()
+    if answer == "yelling" {
+        print("scene 5G - yelling ")
+    } else {
+        if answer == "silent" {
+            print("scene 5H - silent")
+        } else {
+            print("\u{001B}[2J")
+            Scene4D()
+        }
+    }   
+}
+
+func Scene4E() {
+    print("\u{001B}[2J")
+    print("You chose to explore the flower field.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("The flower field had hundreds of flowers dotting its landscape.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("Walking through the greenery reminded you of simpler times.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print(".    .    .")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("You spent a large amount of time in the field, the flowers' sway calming you as you lay in the field.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("You decide that you should probably get up now and continue searching for a way out.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("However, as you get up, you are met by a creature.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("What was this thing?")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("It seemed to be still as you slowly stood up, however you don't know how it would react if you ran.")
+    if scene4Ecompletion == false {
+        sleep(2)
+    }
+    print("Do you choose to make a [run] for it, or do you stay [still]?")
+
+    scene4Ecompletion = true
+    
+    let answer = readLine()
+    if answer == "run" {
+        print("scene 5I - run ")
+    } else {
+        if answer == "still" {
+            print("scene 5J - still ")
+        } else {
+            print("\u{001B}[2J")
+            Scene4E()
+        }
+    }   
+}
+
+func Scene4F() {
+    print("\u{001B}[2J")
+    print("You chose to cross the flower field.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("As you cross the field, the flowers gently swaying with the breeze, you feel uneasy.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("You feel like something is following you.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("As you reach the other end of the field, you reach a weird looking wall.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("Many symbols are carved into it, and there looks to be a large rectangle carved into the whole thing.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("You look around, seeing if there's anything that can push the rectangle.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("Suddenly, a very large branch crack sets you on edge.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("You turn around and come face to face with a creature.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("A massive thing, the creature's snout is inches away from your face.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("You are completely backed up against the ancient wall.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("There's no way out. Unless...")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("What if you provoked the thing and made it break down the wall?")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("The chances of that working are low, but not 0.")
+    if scene4Fcompletion == false {
+        sleep(2)
+    }
+    print("Do you [provoke] the creature, or do you [dodge] it and run?")
+
+    scene4Fcompletion = true
+    
+    let answer = readLine()
+    if answer == "provoke" {
+        print("scene 5K - provoke ")
+    } else {
+        if answer == "dodge" {
+            print("scene 5L - dodge")
+        } else {
+            print("\u{001B}[2J")
+            Scene4F()
+        }
+    }   
+}
+
+var scene4Gcompletion = false
+func Scene4G() {
+    print("\u{001B}[2J")
+    print("You chose to go towards the figure.")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("Your vision is still a little bit blurry, however, you make your way towards it.")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("As you get closer and closer to the figure, the shape distorts over and over again.")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("A human? Nah, a wolf!")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("What is it?")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("You suddenly find yourself face to face with the blurry thing.")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("You can feel it breathing on you.")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("A suddent urge to run crops up inside of you.")
+    if scene4Gcompletion == false {
+        sleep(2)
+    }
+    print("Do you turn tail and [run], or do you try to [interact] with the creature?")
+
+    scene4Gcompletion = true
+    
+    let answer = readLine()
+    if answer == "run" {
+        print("scene 5M - run ")
+    } else {
+        if answer == "interact" {
+            print("scene 5N - interact")
+        } else {
+            print("\u{001B}[2J")
+            Scene4G()
+        }
+    }   
+}
+
+var scene4Hcompletion = false
+func Scene4H() {
+    print("\u{001B}[2J")
+    print("You chose to avoid the figure.")
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("Those mushrooms you had decided to eat earlier aren't really helping you focus at this moment.")
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("You clumsily traipse away, avoiding the creature.")
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("Or so you thought.")
+    if scene4Hcompletion == false {
+        sleep(2)
+    }
+    print("Your steps have somehow brought you straight to the creature.")
+
+    scene4Hcompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        print("scene 5O -  ")
+    } else {
+        if answer == "no" {
+            print("scene 5P -")
+        } else {
+            print("\u{001B}[2J")
+            Scene4H()
+        }
+    }   
+}
+
 getNameForImmersiveness()
 startingScreen()
+/*
+var scenecompletion = false
+func Scene() {
+    print("\u{001B}[2J")
+    if scenecompletion == false {
+        sleep(2)
+    }
 
-
-
-
+    scenecompletion = true
+    
+    let answer = readLine()
+    if answer == "yes" {
+        print("scene 5 -  ")
+    } else {
+        if answer == "no" {
+            print("scene 5 -")
+        } else {
+            print("\u{001B}[2J")
+            Scene()
+        }
+    }   
+}
+*/
 
 // some notes, and test code!
 
